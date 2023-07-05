@@ -1,0 +1,114 @@
+/* div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: lightgray;
+} */
+
+/* 전체 선택자*/
+/*
+ * {
+  color: red;
+} */
+
+/* 태그 선택자 span {
+  background-color: red;
+} */
+
+/* 클래스 선택자 */
+.orange {
+  color: orange;
+}
+
+/* 아이디 선택자  */
+#orange {
+  color: blue;
+}
+
+/* 일치 선택자 */
+span.orange {
+  color: red;
+}
+
+/* 자식 선택자 */
+ul > .orange {
+  background-color: gray;
+}
+
+/* 하위 선택자 */
+ul .orange {
+  font-weight: bold;
+}
+
+/* 인접 형제 선택자 바로 인접한 요소만 선택을 한다 그래서 포도는 변하지 않는다. */
+.orange + li {
+  font-size: 30px;
+}
+
+/* 일반 형제 선택자 : 뒤에 오는 모든 요소를 선택하게 된다. */
+.orange ~ li {
+  color: green;
+}
+
+a:hover {
+  color: Red;
+}
+
+/* 액티브 선택자 : 마우스를 클릭하거나, 클릭하고 있는 동안에  */
+a:active {
+  color: white;
+  background-color: black;
+}
+/* 
+focus: 포커스가 되어 있을 때 */
+input:focus {
+  background-color: lightgray;
+}
+
+/* first-child 선택자: 선택자 abc 가 형제 요소 중 ""첫째라면"" 선택 */
+.fruits span:first-child {
+  color: red;
+}
+
+.fruits div:first-child {
+  color: blue;
+}
+
+/* last-child : 선택자 ABC가 형제 요소라면  */
+
+.fruits h1:last-child {
+  text-decoration: underline;
+}
+
+.fruits p:last-child {
+  color: green;
+}
+
+/* nth-child(n) : nth-child(1) 이런 식으로 사용하는 것 1이면 firt-child랑 똑같음 */
+
+/* 부정 선택자, ABC:not(XYZ) :아닌것들만 적용*/
+.fruits *:not(span) {
+  background-color: aqua;
+}
+
+/* before 비포 선택자, 선택자 ABC 요소의 내부 앞에 내용을 삽입 */
+.fruits::before {
+  content: "과일 목록 시작";
+}
+
+/* after 선택자 */
+.fruits::after {
+  content: "과일 목록 끝";
+}
+
+input[disabled] {
+  background-color: black;
+}
+
+input[readonly] {
+  background-color: orange;
+}
+
+input[type="password"] {
+  color: red;
+}

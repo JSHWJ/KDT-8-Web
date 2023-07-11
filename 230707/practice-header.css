@@ -90,7 +90,7 @@ header {
 }
 
 /* header4 */
-.header4 {
+/* .header4 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -109,4 +109,4 @@ header {
   justify-content: space-between;
   flex-direction: row;
   width: 25%;
-}
+} */

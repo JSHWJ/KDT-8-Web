@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const msg = "안녕하세요";
+      const name = "길동";
+
+      console.log(msg, name, "님");
+      console.log("${msg} ${name}님"); //백틱
+
+      let checked = true;
+      let isShow = false; // Boolean 데이터
+
+      //Undefined : 미할당 데이터, 선언은 했지만 아직 값을 넣지 않음
+      //Null :어떤 값이 의도적으로 비어 있음을 의미할 때 사용함
+
+      //array 배열 데이터
+      let fruits = ["orange", "pineapple", "apple", "banana"];
+      console.log(fruits[0], fruits[1], fruits[2], fruits[3]);
+      console.lot(fruits);
+      console.log("색상 : ${fruits}");
+
+      let list = [1, 2, 3, 4, 5, 6];
+      console.log(list[1]);
+      console.log(list.length);
+
+      list.pop();
+      console.log(list);
+
+      //   Object : 여러 데이터 꾸러미
+
+      let cat = {
+        name: "나비",
+        age: 1,
+        isCute: true,
+      };
+
+      let mathScore = prompt("수학 점수를 입력 하세요");
+      let engScore = prompt("영어 점수를 입력하세요");
+
+      let avg = (mathScore + engScore) / 2;
+
+      // 문자형 변환 : 자동 형 변환에 의존하지 않고, 개발자가 직접 형 변환을 시키는 것
+      // - 문자로 변환 -> String(), toString()
+
+      console.log("형변환");
+      let num = 456;
+      console.log(typeof num); //number
+      let num1 = String(num);
+      console.log(typeof num1); //string
+      let num2 = num.toString();
+      console.log(typeof num2); //string
+
+      console.log(typeof num);
+
+      //String() toString()의 차이?\
+      //   String() -> null과 undefined에도 문제 안 생김
+      //   toString() -> null과 undefined 에서 문제 발생
+
+      // typeof : 자료형을 알려줌
+
+      // 숫자형 변환
+
+      console.log(Number("123"));
+      console.log(Number("abc"));
+
+      //   함수 선언문이란?
+
+      function functionName() {
+        //함수 선언문
+        console.log("안녕하세요");
+      } //functionName이라는 함수를 선언한 것
+      functionName();
+
+      //   함수 표현식이란?
+      let functionName2 = function () {
+        console.log("안녕하세요");
+      }; //익명함수임
+      functionName2();
+
+      //   함수 선언문은 어디서든 호출이 가능하다. functionName()이 맨 위로 가도 된다는 뜻
+      //   하지만 표현식은 코드에 도달하면 함수가 생성되기 때문에 함수 정의 전 함수 이름을 호출하면
+      //   오류가 발생함
+
+      // 화살표 함수란?
+      let functionName3 = () => {
+        console.log("안녕하세요2");
+      };
+
+      function hello(name) {
+        console.log(name + "님 안녕하세요.");
+        console.log(age + "세");
+
+        return age + 10;
+      }
+      let result = hello("홍길동", 10);
+      console.log("result: ", result);
+      let a = 1;
+      hello(a);
+    </script>
+  </head>
+  <body></body>
+</html>

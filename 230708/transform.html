@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      img.hover {
+        /* transform: translateY(100px);
+              transform: scaleX(10); */
+        /* transform: rotatey(90deg); => 회전 */
+        /* transform: skew(-45deg, 45deg); => 기울기 */
+        transform: skew(-45deg, 45deg);
+        /* backface-visibility => 뒷면 보이게 할지의 여부 */
+      }
+      /* div {
+              width: 100px;
+              height: 100px;
+              background-color: yellow;
+              transition-property: width;
+              transition-duration: 2s;
+              transition-timing-function: ease;
+              transition-delay: 0.5s;
+
+              /* transition: width 2s ease 0.5s; => 순서 기억할 것! */
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        position: relative;
+        animation-name: myanim;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+      }
+
+      /* 갑자기 애니메이션 속성이 중간에 추가되면, 그게 어색하게 표현됨
+0으로 주더라도 속성을 처음부터 넣어두는게 자연스럽다 */
+      @keyframes myanim {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 100px;
+          top: 0px;
+        }
+        50% {
+          left: 200px;
+          top: 0px;
+        }
+        75% {
+          left: 100px;
+          top: 0px;
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./green.png" />
+    <br />
+    <div></div>
+  </body>
+</html>

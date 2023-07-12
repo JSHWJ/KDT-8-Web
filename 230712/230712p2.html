@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let fruit1 = [
+        "사과",
+        "딸기",
+        "파인애플",
+        "수박",
+        "참외",
+        "오렌지",
+        "자두",
+        "망고",
+      ];
+      let fruit2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
+
+      let same = [];
+      let diff = ["딸기", "자두"];
+
+      same = fruit1.filter(function (fruit1_f) {
+        for (fruit2_f of fruit2) {
+          if (fruit1_f == fruit2_f) return fruit1_f;
+        }
+      });
+
+      //   diff = fruit1.filter(function (fruit1_f) {
+      //     for (same_f of same) {
+      //       if (same_f == fruit1_f) {
+      //         fruit1_f.pop(same_f);
+      //       }
+      //       return fruit1_f;
+      //     }
+      //   });
+      console.log(same);
+      console.log(diff);
+    </script>
+  </head>
+  <body></body>
+</html>

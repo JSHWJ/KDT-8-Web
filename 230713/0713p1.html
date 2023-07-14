@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>값1:<input type="text" id="value1" /></div>
+    <div>값2:<input type="text" id="value2" /></div>
+    <div>연산자:<input type="text" id="cal" /></div>
+    <div>결과:<input type="text" id="result" /></div>
+
+    <button onclick="calculate()">계산하기</button>
+    <button onclick="calcel()">초기화</button>
+  </body>
+  <script>
+    let result = document.getElementById("result").value;
+
+    function calculate() {
+      let value1 = document.getElementById("value1").value;
+      let value2 = document.getElementById("value2").value;
+      let cal = document.getElementById("cal").value;
+      if (cal == "+") {
+        document.getElementById("result").value =
+          Number(value1) + Number(value2);
+      } else if (cal == "-") {
+        document.getElementById("result").value =
+          Number(value1) - Number(value2);
+      } else if (cal == "/") {
+        document.getElementById("result").value =
+          Number(value1) / Number(value2);
+      } else if (cal == "*") {
+        document.getElementById("result").value =
+          Number(value1) * Number(value2);
+      }
+    }
+
+    function calcel() {
+      document.getElementById("value1").value = "";
+      document.getElementById("value2").value = "";
+      document.getElementById("cal").value = "";
+      document.getElementById("result").value = "";
+    }
+  </script>
+</html>

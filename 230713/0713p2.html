@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 50px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>방명록입니다.</div>
+    <div><b>작성자</b><input type="text" id="writer" /></div>
+    <div><b>내용</b><input type="text" id="content" /></div>
+
+    <div><button onclick="addContent()">작성</button></div>
+    <table border="1">
+      <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </tr>
+    </table>
+  </body>
+  <script>
+    let num = 0;
+
+    function addContent() {
+      let today = new Date();
+
+      let year = today.getFullYear(); // 년도
+      let month = today.getMonth() + 1; // 월
+      let date = today.getDate(); // 날짜
+      let hours = today.getHours(); // 시
+      let minutes = today.getMinutes();
+      num += 1;
+
+      let writer = document.getElementById("writer").value;
+      let content = document.getElementById("content").value;
+      let td_writer = document.createElement("td");
+      td_writer.innerText = writer;
+      let td_content = document.createElement("td");
+      td_content.innerText = content;
+
+      let new_tr = document.createElement("tr");
+      new_tr.append(num);
+      new_tr.append(td_writer);
+      new_tr.append(td_content);
+      new_tr.append(year + "-" + month + "-" + date + " " + hours);
+
+      let tr = document.querySelector("tr");
+      tr.append(new_tr);
+    }
+  </script>
+</html>

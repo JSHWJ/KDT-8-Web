@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      .sun {
+        color: red;
+      }
+      .sat {
+        color: blue;
+      }
+      .calendar {
+        font-size: 20px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        font-weight: 20;
+        cursor: pointer;
+      }
+      td {
+        text-align: center;
+        font-size: 10px;
+      }
+      .all {
+        width: 500px;
+        height: 500px;
+        margin-left: 40vw;
+      }
+    </style>
+    <script>
+      //td를 클릭 했을 때 어떤 td가 선택되었는지 담고 있는 정보
+      //   let target = null;
+      $(document).ready(function () {
+        $("td").click(function () {
+          let day = $(this).html();
+          let content = $(this);
+          $(".day").val(day);
+          var confirmBtn = $("button");
+          confirmBtn.click(function () {
+            var inputText = $(".input").val();
+            content.html(day + "<br>" + inputText);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>날짜:<input type="text" class="day" /></div>
+    <div>내용:<input type="text" class="input" /></div>
+    <button>작성</button>
+    <div class="all">
+      <div style="color: green; font-size: 30px; text-align: center">
+        2023년 7월
+      </div>
+      <table class="calendar" cellpadding="17px">
+        <tr>
+          <td class="sun">일</td>
+          <td>월</td>
+          <td>화</td>
+          <td>수</td>
+          <td>목</td>
+          <td>금</td>
+          <td class="sat">토</td>
+        </tr>
+        <tr>
+          <td class="sun"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="sat">1</td>
+        </tr>
+        <tr>
+          <td class="sun">2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td class="sat">8</td>
+        </tr>
+        <tr>
+          <td class="sun">9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td class="sat">15</td>
+        </tr>
+        <tr>
+          <td class="sun">16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td class="sat">22</td>
+        </tr>
+        <tr>
+          <td class="sun">23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td class="sat">29</td>
+        </tr>
+        <tr>
+          <td class="sun">30</td>
+          <td>31</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

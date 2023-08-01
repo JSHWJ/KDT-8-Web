@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div>이름: <span><%= userInfo.id %></span></div>
+    <div>성별: <span><%= userInfo.sex %></span></div>
+    <div>
+      생년월일:
+      <span
+        ><%= userInfo.yy %>년 <%= userInfo.mm %>월 <%= userInfo.dd %>일</span
+      >
+    </div>
+    <div>관심사: <span><%= userInfo.interest %></span></div>
+    <br />
+    <br />
+    <a href="/p1"> 홈으로 이동</a>
+  </body>
+</html>

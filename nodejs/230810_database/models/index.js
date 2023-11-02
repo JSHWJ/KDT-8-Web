@@ -11,6 +11,13 @@ const sequelize = new Sequelize(
   config
 );
 
+//모델
+db.Student = require('./Students')(sequelize)
+db.Classes = require('./Classes')(sequelize)
+//관계형성
+db.Student.hasMany(db.Classes,{foreignKey: 'classes_id'});
+db.Classes.belongsTo(db.Classes,{foreignKey: 'students_id'});
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

@@ -7,16 +7,19 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/static", express.static(__dirname + "/static"));
 
+//router
+const userRouter = require("./routes/user");
+app.use("/user", userRouter);
 
-const router = require("./routes/student");
-app.use("/", router);
+//404
+app.use("*", (req, res) => {
+  res.render("404");
+});
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
 });
-
-// select * from students inner join classes on students.id = classed.student_id
-//from students as 

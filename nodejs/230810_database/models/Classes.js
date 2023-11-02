@@ -25,3 +25,7 @@ const classModel = (sequealize) => {
     },
   });
 };
+
+
+
+

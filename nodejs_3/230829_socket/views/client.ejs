@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <button id="helloButton">hello</button>
+    <button id="studyButton">study</button>
+    <button id="byeButton">bye</button>
+    <div id="responseDiv"></div>
+    <script>
+      //io()가 클라이언트 소켓 생성 및 연결 설정
+      const socket = io();
+
+      const helloButton = document.getElementById("helloButton");
+      const studyButton = document.getElementById("studyButton");
+      const byeButton = document.getElementById("byeButton");
+      const responseDiv = document.getElementById("responseDiv");
+
+      helloButton.addEventListener("click", () => {
+        socket.emit("message", "hello");
+      });
+      studyButton.addEventListener("click", () => {
+        socket.emit("message", "study");
+      });
+
+      byeButton.addEventListener("click", () => {
+        socket.emit("message", "bye");
+      });
+
+      socket.on("response", (data) => {
+        responseDiv.textContent = data;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@mixin circle($size) {
+  animation: clockwiseMovement-#{$size} 2s linear forwards infinite;
+
+  @keyframes clockwiseMovement-#{$size} {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    25% {
+      transform: translateX($size) translateY(0);
+    }
+    50% {
+      transform: translateX($size) translateY($size);
+    }
+    75% {
+      transform: translateX(0) translateY($size);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}

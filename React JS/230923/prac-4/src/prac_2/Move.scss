@@ -1,0 +1,32 @@
+@import "./utils.scss";
+
+.parent {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 80px;
+  flex-direction: column;
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+
+    &.pink {
+      background-color: pink;
+      @include circle(10px);
+    }
+
+    &.yellow {
+      background-color: yellow;
+      @include circle(20px);
+    }
+
+    &.green {
+      background-color: green;
+      @include circle(30px);
+    }
+  }
+}

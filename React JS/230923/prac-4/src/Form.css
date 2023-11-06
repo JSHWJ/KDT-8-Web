@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  border: 1px solid #444444;
+}
+th,
+td {
+  border: 1px solid #444444;
+  padding: 10px;
+}
+.input {
+  padding: 10px;
+  padding-left: 0px !important;
+}
+
+.input input {
+  margin: 10px;
+  margin-left: 0px !important;
+}
+
+.select {
+  margin: 10px;
+  margin-left: 0px !important;
+}

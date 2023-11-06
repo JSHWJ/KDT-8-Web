@@ -1,0 +1,28 @@
+{
+  "folders": [
+	{
+		"name": "nodejs_2",
+		"path": "../../../Desktop/github/KDT-8-Web/nodejs_2"
+	},
+	{
+		"name": "230819_secret_practice",
+		"path": "../../230819_secret_practice"
+	},
+	{
+		"path": "../../10_form_practice"
+	},
+	{
+		"path": "../../11_form_dynamic"
+	},
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../nodejs_mvc"
+	},
+	{
+		"path": "../../14_mvc_practice"
+	}
+],
+  "settings": {}
+}
